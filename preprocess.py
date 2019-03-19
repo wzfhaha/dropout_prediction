@@ -4,8 +4,8 @@ import pickle as pkl
 import math
 from sklearn.preprocessing import StandardScaler
 
-train_feat= pd.read_csv('train_features2.csv', index_col=0)
-test_feat= pd.read_csv('test_features2.csv', index_col=0)
+train_feat= pd.read_csv('train_features.csv', index_col=0)
+test_feat= pd.read_csv('test_features.csv', index_col=0)
 all_feat = pd.concat([train_feat, test_feat])
 
 user_profile = pd.read_csv('user_info.csv', index_col='user_id')
