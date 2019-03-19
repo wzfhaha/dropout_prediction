@@ -27,6 +27,10 @@ for a in video_action + problem_action + forum_action + click_action + close_act
     action_num = all_log.groupby('enroll_id').sum()[[a+'#num']]
     all_num = pd.merge(all_num, action_num, left_index=True, right_index=True)
 all_num = pd.merge(all_num, all_truth, left_index=True, right_index=True)
-all_num.loc[test_enroll].to_csv('test_features.csv')
-all_num.loc[train_enroll].to_csv('train_features.csv')
+enroll_info = all_log[['username','course_id','enroll_id']].drop_duplicates()
+enroll_info.index = enroll_info['enroll_id']
+del enroll_info['enroll_id']
+all_num = pd.merge(all_num, enroll_info, left_index=True, right_index=True)
+all_num.loc[test_enroll].to_csv('test_features2.csv')
+all_num.loc[train_enroll].to_csv('train_features2.csv')
 
