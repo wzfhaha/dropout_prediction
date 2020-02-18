@@ -18,3 +18,13 @@ python preprocess.py
 python main.py
 ```
 Note: Features used in this demo are less than what we used in the paper, so the performance will be slightly lower than reported score.
+
+# Reference
+```
+@inproceedings{feng2019dropout,
+title={Understanding Dropouts in MOOCs},
+author={Wenzheng Feng and Jie Tang and Tracy Xiao Liu and Shuhuai Zhang and Jian Guan},
+booktitle={Proceedings of the 33rd AAAI Conference on Artificial Intelligence},
+year={2019}
+}
+```
